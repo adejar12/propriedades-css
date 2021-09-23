@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa propriedade é semelhante a justify-itens. Essa propriedade define
+        o alinhamento do item no eixo primario dentro do contaivel grid, mas
+        a diferenta do justify-itens ele é aplicado nos filhos, não no pai
+        Valores possiveis: 
+            auto(automatico)
+            normal()
+            first(primeiro )
+            last(ultimo)
+            start(começo)
+            end(fim)
+            strech(esticar)
+            center(centro)
+            flex-start(compativel com o flex-layout)
+            flex-end(compativel com o flex-layout)
+            left(Não suportado em todos os navegadores)
+            right(Não suportado em todos os navegadores)
+            baseline(Usar a linha base dos textos para alinhar eles)
+            first baseline(O mesmo alinhamento da abseline, mas pela primeira linha)
+            last baseline(O mesmo alinhamento da abseline, mas pela ultima linha)
+            initial(voltar ao valor padrão)
+            inherit(pegar do pai)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #333;
+            display: grid;
+            height: 100vh;
+        }
+        
+        div {
+            margin: 10px;
+            height: 200px;
+            width: 200px;
+            background-color: #fff;
+        }
+        /*Aplicando apenas para o 2º filho*/
+        
+        div:nth-child(2) {
+            justify-self: end;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

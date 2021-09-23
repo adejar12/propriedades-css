@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*overflow-inline (depreciado) essa propriedade é o mesmo do de linha
+        mas esta disponivel apenas no Firefox
+        Valores possiveis: 
+            normal(é o normal kkkk)
+            break-word(quebrar em qualquer parte, independente da palavra)
+            anywhere(quebrar em qualquer parte, no menor possivel)
+            initial(valor inicial)
+            inherit(pegar do pai ||Pega os valores do pai||)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: min-content;
+            max-width: 150px;
+            border: #000 solid 5px;
+            overflow-inline: auto;
+        }
+        
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur <span>adipisicingadipisicingadipisicing</span> elit. Amet fuga ipsum reiciendis? Atque expedita, quos, natus consectetur ea nostrum possimus ipsum doloribus earum, voluptate consequuntur quia accusantium
+        iure unde ab.
+    </div>
+
+</body>
+
+</html>

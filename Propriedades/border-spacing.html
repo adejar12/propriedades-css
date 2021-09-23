@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*border-spacing essa propria define o espaçamento entre a células de uma tabela
+        Valores possiveis: 
+            length (numero, com unidade de medida || Valor padrão 2px||)
+            unset (para desativar)
+            initial (voltar ao valor original)
+            inherit (pegar o dado do pai || Valor herdade?: SIM ||)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: rgb(94, 94, 94);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        /*Como é tabela, ela sabe o que pode aumentar ou não, no sentido de cabecalho*/
+        
+        table {
+            border: solid 1px #333;
+            width: 70vw;
+            height: 20vw;
+            border-collapse: separate;
+            border-spacing: 10px;
+        }
+        
+        td,
+        th {
+            border: solid 1px #333
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Cargo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Adejar</th>
+                <th>adehar@gmail</th>
+                <th>64 9 9305-9020</th>
+                <th>Júnior</th>
+            </tr>
+            <tr>
+                <th>Printf</th>
+                <th>printf@gmail</th>
+                <th>64 9 9305-9020</th>
+                <th>Senior</th>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

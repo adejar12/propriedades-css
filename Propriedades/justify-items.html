@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa propriedade é usada em containers GRID e alinham os itens de
+        suas áreas de grade no eixo embutido. É o equivalente a definir a propriedade
+        justify-self em cada um dos elementos filhos
+        Valores possiveis: 
+            normal(normalmente esticar também )
+            stretch(para esticar)
+            center(para centralizar)
+            start()
+            end()
+            flex-start(aquela ideia de que depois vai ser tudo star por conta de padronização)
+            flex-end(aquela ideia de que depois vai ser tudo end por conta de padronização)
+            self-start(alinhar no inicio)
+            self-end(alinha no fim)
+            left(Não suportado em todos os navegadores)
+            right(Não suportado em todos os navegadores)
+            baseline(Usar a linha base dos textos para alinhar eles)
+            first baseline(O mesmo alinhamento da abseline, mas pela primeira linha)
+            last baseline(O mesmo alinhamento da abseline, mas pela ultima linha)
+            safe center()
+            unsafe center()
+            legacy right()
+            legacy left()
+            legacy center()
+            initial(voltar ao valor padrão)
+            inherit(pegar do pai)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #333;
+            display: grid;
+            justify-items: center;
+        }
+        
+        div {
+            margin: 10px;
+            height: 200px;
+            width: 200px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

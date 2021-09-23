@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa propriedade é do modulo flex-box. Ela define os alinhamentos dos itens 
+        no eixo principal, e vc definiu isso antes, se é a linha ou a coluna (flex-direction).
+        Valores possiveis: 
+            flex-start(No inicio do container ||Valor Padrão||)
+            flex-end(fim do container)
+            center(no meio)
+            space-between(enconstar nas estremidades)
+            space-around(distribuido)
+            space-evenly(vai distribuir também, mas vai deixar os cantos com espaço)
+            inherit(pegar do pai)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #333;
+        }
+        /*Como explicado lá em cima, o flex-flow deve ser colocado no pai, por isso
+        esta aqui*/
+        
+        .container {
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0 0 10px rgba(100, 100, 100, .2);
+            width: 80%;
+            height: 90vh;
+            justify-content: center;
+        }
+        
+        .container>div {
+            width: 150px;
+            height: 150px;
+            border-width: .5px;
+            border-style: solid;
+            border-color: black;
+        }
+        
+        .container>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container>div:hover {
+            color: #fdcb6e;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+    </div>
+
+</body>
+
+</html>

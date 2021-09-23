@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa é uma propriedade css vai definir se uma imagem de plano de fundo
+        será rolada com o restante da página ou não
+            scroll(que vai rolar juntp -> e é o valor padrão)
+            fixed(ficar fixo em alguma posição)
+            local(ficar fixo, mas com base em um local)
+            initial(voltar ao valor padrão)
+            inherit(pegar do pai )
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        .full-banner {
+            width: 100vw;
+            height: 100vh;
+            background-image: url('./xps-1.jpg');
+            background-size: contain;
+        }
+        
+        section.xps-detail {
+            height: 500px;
+            background-image: url('./xps-2.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: 0 bottom;
+            background-attachment: scroll;
+            overflow: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full-banner"></div>
+    <section class="xps-detail">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque provident ut, magni nulla corrupti ducimus perspiciatis quaerat numquam fugiat earum quibusdam tempora ex quos hic possimus incidunt delectus ratione?</br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque provident ut, magni nulla corrupti ducimus perspiciatis quaerat numquam fugiat earum quibusdam tempora ex quos hic possimus incidunt delectus ratione?</br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque provident ut, magni nulla corrupti ducimus perspiciatis quaerat numquam fugiat earum quibusdam tempora ex quos hic possimus incidunt delectus ratione?</br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque provident ut, magni nulla corrupti ducimus perspiciatis quaerat numquam fugiat earum quibusdam tempora ex quos hic possimus incidunt delectus ratione?</br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque provident ut, magni nulla corrupti ducimus perspiciatis quaerat numquam fugiat earum quibusdam tempora ex quos hic possimus incidunt delectus ratione?</br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque provident ut, magni nulla corrupti ducimus perspiciatis quaerat numquam fugiat earum quibusdam tempora ex quos hic possimus incidunt delectus ratione?</br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque provident ut, magni nulla corrupti ducimus perspiciatis quaerat numquam fugiat earum quibusdam tempora ex quos hic possimus incidunt delectus ratione?</br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque provident ut, magni nulla corrupti ducimus perspiciatis quaerat numquam fugiat earum quibusdam tempora ex quos hic possimus incidunt delectus ratione?</br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit itaque provident ut, magni nulla corrupti ducimus perspiciatis quaerat numquam fugiat earum quibusdam tempora ex quos hic possimus incidunt delectus ratione?</br>
+    </section>
+
+</body>
+
+</html>

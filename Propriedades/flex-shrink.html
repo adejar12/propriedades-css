@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa propriedade define quanto o item vai ser reduzido em relação aos itens
+        no mesmo containet flexivel. Isso é conforme vc vai modificando a janela do
+         navegador. E essa propriedade é aplicada aos filhos. Parecido com o flex-grow
+        Valores possiveis: 
+            number(numero, não unidade de medida!)
+            initial(voltar ao valor padrão)
+            inherit(pegar do pai)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            background-color: #333;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+        }
+        /*O flex-wrap deve ser desativado para essa funcionalidade ter efeito
+        pelo fato de que ele quebra as linhas,e não queremos que isso aconteça*/
+        
+        .container {
+            width: 15%;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 0px 10px rgba(100, 100, 100, .2);
+            /*flex-wrap: wrap;*/
+            margin: 2% auto;
+        }
+        
+        .container>div {
+            height: 150px;
+            border: solid .5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .2s ease-in-out;
+            flex-shrink: 1;
+            flex-basis: 100px;
+        }
+        
+        .container>div:hover {
+            border-color: #fdcb6e
+        }
+        
+        .container>div.a {
+            flex-shrink: 3;
+        }
+        
+        .container>div.c {
+            flex-grow: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+    </div>
+</body>
+
+</html>

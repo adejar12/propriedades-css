@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa propriedade é do modulo flex-box. Ela define os alinhamentos dos itens 
+        no eixo principal:
+            flex-direction
+            flex-wrap
+        Valores possiveis: 
+           flex-direction( as suas propriedades)
+           flex-wrap( as suas propriedades)
+            initial(valor inicial)
+            inherit(pegar do pai ||Pega os valores do pai||)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #333;
+        }
+        /*Como explicado lá em cima, o flex-flow deve ser colocado no pai, por isso
+        esta aqui*/
+        
+        .container {
+            display: flex;
+            flex-flow: column wrap;
+            box-shadow: 0 0 10px rgba(100, 100, 100, .2);
+            width: 80%;
+            height: 90vh;
+        }
+        
+        .container>div {
+            width: 150px;
+            height: 150px;
+            border-width: .5px;
+            border-style: solid;
+            border-color: black;
+        }
+        
+        .container>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container>div:hover {
+            color: #fdcb6e;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+    </div>
+
+</body>
+
+</html>

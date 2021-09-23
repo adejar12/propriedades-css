@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa é uma propriedade define a posição inicial de uma imagem
+        de plano de fundo
+        Valores possiveis: 
+            top(automatico)
+            right(direita)
+            bottom()
+            left(esquerda)
+            center()
+            length()
+            x%(unidade de medidade - eixo X)
+            y%(unidade de medidade - eixo y)
+            initial(voltar ao valor padrão)
+            inherit(pegar do pai )
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        /*Os tamanhos podem ser dados em 2 valores, 
+        sendo um dad para a largura e outro para a altura*/
+        
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        div {
+            margin: 10px;
+            width: 64px;
+            height: 64px;
+            border: 1px solid #333;
+            background-image: url("./google_sprite.png");
+            transition-duration: 0.8s;
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        
+        div.icon-1 {
+            background-position: 0 calc(-69px*1);
+        }
+        
+        div.icon-2 {
+            background-position: 0 calc(-69px*2);
+        }
+        
+        div.icon-3 {
+            background-position: 0 calc(-69px*3);
+        }
+        
+        div.icon-4 {
+            background-position: 0 calc(-69px*4);
+        }
+        
+        div.icon-4:hover {
+            background-position: 0 calc(-69px*7);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon-1"></div>
+    <div class="icon-2"></div>
+    <div class="icon-3"></div>
+    <div class="icon-4"></div>
+</body>
+
+</html>

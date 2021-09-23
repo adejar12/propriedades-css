@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa é uma propriedade define como uma imagem deve se repetir.
+        Valores possiveis: 
+            repeat(vai repetir para todos os lados)
+            repeat-x(repetir apenas no eixo X)
+            repeat-y(repetir apenas no eixo y)
+            no-repeat(ela não vai repetir, vai mostrar apenas uma vez)
+            initial(voltar ao valor padrão)
+            inherit(pegar do pai )
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("./car.jpg");
+            background-size: 50%;
+            background-position: center;
+            background-repeat: repeat-y;
+            transition: 5s linear all;
+        }
+        
+        body:hover {
+            background-position: center -100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*overflow esse propriedade define de o conteudo deve ser cortado,
+        adicionado uma barra de rolagem ou exibir o conteúdo do estouro de um elemento
+        de nível de bloco quando este estourar nas bordas laterais. 
+        Por ser uma propriedade abreviada, segue a sequencia::after
+            overflow-x
+            overflow-y
+        Valores possiveis: 
+            visible(deixar tudo visivel)
+            hidden(esconder os estouro)
+            scroll(definir um scroll)
+            auto(deixar automaticamente se estourar aparece scroll ou não)
+            initial(valor inicial)
+            inherit(pegar do pai)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 70vw;
+            height: 70vh;
+            border: #000 solid 5px;
+            overflow: auto hidden;
+        }
+        
+        .iten {
+            padding: 50px;
+            margin-right: 20px;
+            border: #ff760c 5px outset
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="car.jpg" alt="">
+    </div>
+
+</body>
+
+</html>

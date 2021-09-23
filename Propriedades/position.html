@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa é uma propriedade define como um elemnto deve ser renderizado/posicionado
+        na tela. Por padrão, todos os elementos são posicionados estaticamente (static)
+        o que faz com que o espaço seja ocupado apenas por ele mesmo
+        Valores possiveis:
+            static(explicado lá em cima e não afetado pelo top, right,bottom e left )
+            fixed(deixar fixo,cogelado, o scroll não ira afetar ele e o mesmo passa por cima de outros elementos)
+            absolute(Uma posição fixa em ralação ao ancestral posicionado mais proximo
+            . Caso não exista nenhum elemnto ancestral ele usara o corpo da página, isso
+            fara com que ele acompanhe o scroll)
+            relative(em qualquer lugar da tela)
+            sticky(ficar congelado em cima ao rodar o scrow)
+            inherit(pegar do pai )
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            background-color: #17181c;
+            color: #fff;
+            font-family: sans-serif;
+            height: 150vh;
+        }
+        
+        .pulse-static {
+            background: none;
+            color: #ff760c;
+            padding: 15px 40px;
+            border: 2px solid #ef8f6e;
+        }
+        
+        .pulse-relative {
+            position: relative;
+            top: 100px;
+            right: 80px;
+            background: none;
+            color: #ff760c;
+            padding: 15px 40px;
+            border: 2px solid #ef8f6e;
+        }
+        
+        .pulse-fixed {
+            position: fixed;
+            top: 100px;
+            right: 80px;
+            background: none;
+            color: #ff760c;
+            padding: 15px 40px;
+            border: 2px solid #ef8f6e;
+        }
+        
+        .pulse-absolute {
+            position: absolute;
+            top: 80px;
+            background: none;
+            color: #ff760c;
+            padding: 15px 40px;
+            border: 2px solid #ef8f6e;
+        }
+        /*O botão acompanha a div*/
+        
+        #posicao {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            top: 200px
+        }
+        
+        .pulse-sticky {
+            position: sticky;
+            top: 80px;
+            left: 450px;
+            background: none;
+            color: #ff760c;
+            padding: 15px 40px;
+            border: 2px solid #ef8f6e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>Static</button>
+    <button>Relative</button>
+    <button>Fixed</button>
+    <button>Absolute</button>
+    <button class="pulse-sticky">Sticky</button>
+
+    <div id="posicao">
+        <button class="pulse-absolute">Absolute</button>
+    </div>
+
+
+</body>
+
+</html>

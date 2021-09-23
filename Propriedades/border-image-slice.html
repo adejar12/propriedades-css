@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*border-image-slice define como a imaem da borda será dividida (a proporção dela)
+        Valores possiveis: 
+            number (numero)
+            % ()
+            fill ()
+            initial (voltar ao valor original)
+            inherit (pegar o dado do pai)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: rgb(94, 94, 94);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        /*Se voce colocar o border-image-slice como 30 ira notar o que acontece: .
+        Essa propriedade tem que ser testada no navegador, para visuaizar as mudanças*/
+        
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: lightslategrey;
+            border-style: solid;
+            border-width: 1vh;
+            border-color: #fbc531;
+            border-image-source: url('border-image-source.png');
+            border-image-width: 50px;
+            border-image-slice: 33%;
+            border-image-outset: 50px;
+            border-image-repeat: round;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+    </div>
+</body>
+
+</html>

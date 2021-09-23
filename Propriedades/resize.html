@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*resize essa propriedade determina se e como um elemento HTML que possua essa propriedade
+        deve se comportar ao ser redimensonado pelo usuario. Pode até bloquear
+        Valores possiveis: 
+            none(desabilita)
+            both(para redirecionar em ambos os lados do elemento)
+            horizontal(redirecionar só na horizontal)
+            vertical(redirecionar só na vertical)
+            block(-- funcionando só no firefox)
+            inline(-- funcionando só no firefox)
+            initial(valor inicial)
+            inherit(pegar do pai ||Pega os valores do pai||)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .content {
+            width: 50vw;
+        }
+        /*Sem o overflow não funciona*/
+        
+        .item {
+            resize: both;
+            overflow: auto;
+        }
+        /*Removendo a possibildiade de modificar*/
+        
+        textarea {
+            resize: none;
+        }
+        
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <p class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni recusandae, sapiente iure autem nobis eius expedita eaque. Voluptas officia a, ipsa perspiciatis reprehenderit, pariatur similique accusamus eveniet minima natus voluptatum.</p>
+        <p class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, exercitationem. Ratione, alias repellat corporis unde, necessitatibus saepe suscipit libero, esse aperiam deleniti laborum omnis nam quisquam nobis dicta porro placeat!</p>
+    </div>
+
+    <form action="">
+        <textarea name="" id="" cols="30" rows="10">
+
+        </textarea>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            background-color: #c33333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .coracao {
+            width: 100px;
+            height: 90px;
+            position: relative;
+            border: solid 1px #000;
+        }
+        /*Quando se coloca a , quer dizer que essas propriedades vão funcionar
+        para esses 2 seletores*/
+        
+        .coracao:before,
+        .coracao:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50px;
+            color: #fff;
+            width: 50px;
+            height: 80px;
+            background-color: #fff;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        
+        .coracao:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        /*Apenas um exemplo de como vc pode manipular o CSS, e fazer que certas coisas
+        Apareçam antes ou depois do conteudo*/
+        
+        .real:after {
+            content: 'R$';
+        }
+        
+        .dolar::before {
+            content: 'U$';
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="coracao">
+    </div>
+
+    <span class="real">
+        100
+    </span>
+
+    <span class="dolar">
+        100
+    </span>
+</body>
+
+</html>

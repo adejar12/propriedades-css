@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa propriedade é do modulo flex-box. Essa propriedade definse se os itens devem
+        ou não quebrar, ao atigindir o limite.
+        vai no pai
+        Valores possiveis: 
+           nowerap( || Padrão ||)
+           wrap(Para definir a quebra )
+           wrap-reverse(para fazer a quebra reversa)
+            initial(valor inicial)
+            inherit(pegar do pai ||Pega os valores do pai||)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        /*Como explicado lá em cima, o flex-wrap deve ser colocado no pai, por isso
+        esta aqui*/
+        
+        .container {
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0 0 10px rgba(100, 100, 100, .2);
+            width: 80%;
+            height: 90vh;
+            flex-wrap: wrap;
+        }
+        /*Mesmo as divs tendo 150 de largura e altura, o flex quebra esse tamanho, 
+                para evitar isso usamos o flex-wrap*/
+        
+        .container>div {
+            width: 150px;
+            height: 150px;
+            border-width: .5px;
+            border-style: solid;
+            border-color: black;
+        }
+        
+        .container>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container>div:hover {
+            color: #fdcb6e;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+    </div>
+
+</body>
+
+</html>

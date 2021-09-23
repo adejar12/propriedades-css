@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa é uma propriedade define o tamanho da imagem de fundo de um elemento.
+        Valores possiveis: 
+            auto(automatico)
+            lenght(unidade de medida)
+            cover( vai colocar toda a imagem que conseguir, mas sem recortar )
+            contain(vai cobrir toda area disponivel, mesmo que tenha recorte)
+            initial(voltar ao valor padrão)
+            inherit(pegar do pai )
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        /*Os tamanhos podem ser dados em 2 valores, 
+        sendo um dad para a largura e outro para a altura*/
+        
+        body {
+            margin: 0;
+            height: 100vh;
+        }
+        
+        div {
+            position: fixed;
+            top: 100px;
+            left: 100px;
+            width: 200px;
+            height: 150px;
+            background-image: url("./coffee.jpg");
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

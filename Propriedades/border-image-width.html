@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*border-image-width a largura da dimensão da imagem da borda
+        Valores possiveis: 
+            number (numero)
+            % ()
+            auto
+            initial (voltar ao valor original)
+            inherit (pegar o dado do pai)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: rgb(94, 94, 94);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: lightslategrey;
+            border-style: solid;
+            border-width: 1vh;
+            border-color: #fbc531;
+            border-image-source: url('border-image-source.png');
+            border-image-width: 33%;
+            border-image-slice: 30%;
+            border-image-outset: 50px;
+            border-image-repeat: round;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+    </div>
+</body>
+
+</html>

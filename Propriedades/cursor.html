@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa é uma propriedadedefine o cursor do mouse, que sera exibido
+        quando o mouse passar por determinado elemento
+        Valores possiveis: 
+            auto(automatico - ele se ajusta com base no elemento HTML)
+            cursor-type(É uma constante, e vai definir o tipo,)
+            initial(voltar ao valor padrão)
+            inherit(pegar do pai |SIMM, PEGA||)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #333;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(7, 1fr);
+            grid-gap: 10px
+        }
+        
+        body>div {
+            border: #ccc 3px solid;
+            transition: all .2s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        body>div:hover {
+            border-color: #fdcb6e;
+            font-weight: bold;
+        }
+        
+        div.cursor-default {
+            cursor: default;
+        }
+        
+        div.cursor-pointer {
+            cursor: pointer;
+        }
+        
+        div.cursor-alias {
+            cursor: alias;
+        }
+        
+        div.cursor-all-scroll {
+            cursor: all-scroll;
+        }
+        
+        div.cursor-auto {
+            cursor: all-auto;
+        }
+        
+        div.cursor-cell {
+            cursor: cell;
+        }
+        
+        div.cursor-col-resize {
+            cursor: col-resize;
+        }
+        
+        div.cursor-context-menu {
+            cursor: context-menu;
+        }
+        
+        div.cursor-copy {
+            cursor: copy;
+        }
+        
+        div.cursor-crosshair {
+            cursor: crosshair;
+        }
+        
+        div.cursor-e-resize {
+            cursor: e-resize;
+        }
+        
+        div.cursor-ew-resize {
+            cursor: ew-resize;
+        }
+        
+        div.cursor-nesw-resize {
+            cursor: nesw-resize;
+        }
+        
+        div.cursor-nwse-resize {
+            cursor: nwse-resize;
+        }
+        
+        div.cursor-s-resize {
+            cursor: s-resize;
+        }
+        
+        div.cursor-w-resize {
+            cursor: w-resize;
+        }
+        
+        div.cursor-n-resize {
+            cursor: n-resize;
+        }
+        
+        div.cursor-ns-resize {
+            cursor: ns-resize;
+        }
+        
+        div.cursor-se-resize {
+            cursor: se-resize;
+        }
+        
+        div.cursor-ne-resize {
+            cursor: ne-resize;
+        }
+        
+        div.cursor-nw-resize {
+            cursor: nw-resize;
+        }
+        
+        div.cursor-sw-resize {
+            cursor: sw-resize;
+        }
+        
+        div.cursor-grab {
+            cursor: grab;
+        }
+        /*Aqui é apenas um ideia, de como seria clicando e segurando
+        para o cursor mudar a aparencia*/
+        
+        div.cursor-grab:active {
+            cursor: grabbing;
+        }
+        
+        div.cursor-grabbing {
+            cursor: grabbing;
+        }
+        
+        div.cursor-help {
+            cursor: help;
+        }
+        
+        div.cursor-move {
+            cursor: move;
+        }
+        
+        div.cursor-no-drop {
+            cursor: no-drop;
+        }
+        
+        div.cursor-none {
+            cursor: none;
+        }
+        
+        div.cursor-not-allowed {
+            cursor: not-allowed;
+        }
+        
+        div.cursor-progress {
+            cursor: progress;
+        }
+        
+        div.cursor-row-resize {
+            cursor: row-resize;
+        }
+        
+        div.cursor-text {
+            cursor: text;
+        }
+        
+        div.cursor-vertical-text {
+            cursor: vertical-text;
+        }
+        
+        div.cursor-wait {
+            cursor: wait;
+        }
+        
+        div.cursor-zoom-in {
+            cursor: zoom-in;
+        }
+        
+        div.cursor-zoom-out {
+            cursor: zoom-out;
+        }
+        
+        div.cursor-url {
+            cursor: url('./hcode.svg'), pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor-default">Default</div>
+    <div class="cursor-pointer">Pointer</div>
+    <div class="cursor-alias">Alias</div>
+    <div class="cursor-all-scroll">All Scroll</div>
+    <div class="cursor-auto">Auto</div>
+    <div class="cursor-cell">Cell</div>
+    <div class="cursor-col-resize">Col-resize</div>
+    <div class="cursor-context-menu">Context-menu</div>
+    <div class="cursor-copy">Copy</div>
+    <div class="cursor-crosshair">Crosshair</div>
+    <div class="cursor-e-resize">E-resize</div>
+    <div class="cursor-ew-resize">Ew-resize</div>
+    <div class="cursor-nesw-resize">NESW-resize</div>
+    <div class="cursor-nwse-resize">Nwse-resize</div>
+    <div class="cursor-s-resize">S-resize</div>
+    <div class="cursor-w-resize">W-resize</div>
+    <div class="cursor-n-resize">N-resize</div>
+    <div class="cursor-ns-resize">NS-resize</div>
+    <div class="cursor-se-resize ">Se-resize </div>
+    <div class="cursor-ne-resize">NE-resize</div>
+    <div class="cursor-nw-resize">NW-resize</div>
+    <div class="cursor-sw-resize ">SW-resize </div>
+    <div class="cursor-grab">Grab</div>
+    <div class="cursor-grabbing">Grabbing</div>
+    <div class="cursor-help">Help</div>
+    <div class="cursor-move">Move</div>
+    <div class="cursor-no-drop">No-drop</div>
+    <div class="cursor-none">None</div>
+    <div class="cursor-not-allowed">Not-allowed</div>
+    <div class="cursor-progress">Progress</div>
+    <div class="cursor-row-resize">Row-resize</div>
+    <div class="cursor-text">Text</div>
+    <div class="cursor-vertical-text">Vertical-text</div>
+    <div class="cursor-wait">Wait</div>
+    <div class="cursor-zoom-in">Zoom-in</div>
+    <div class="cursor-zoom-out">Zoom-out</div>
+    <div class="cursor-url">Url</div>
+</body>
+
+</html>

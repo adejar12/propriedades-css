@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*z-index essa propriedade define a ordem de pilha de um elemento. O elemento com
+        maior ordem de pilha esta sempre na frente de um elemento com uma ordem de pilha
+        menor
+        Valores possiveis: 
+            auto(o z index vai ser calculado automaticamente, com base nos elementos que
+            vão sendo colocados na tele)
+            number(apenas um numero)
+            initial(valor inicial)
+            inherit(pegar do pai ||Pega os valores do pai||)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            width: 250px;
+            height: 250px;
+        }
+        /*O z-index só funciona se tiver position*/
+        
+        .fundo {
+            background-color: #487eb0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .destaque {
+            background-color: #95a5a6;
+            position: absolute;
+            left: 100px;
+            top: 50px;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fundo">
+
+    </div>
+    <div class="destaque">
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*border-image-source permite colocar uma imagem na borda
+        Valores possiveis: 
+            none (nenhum)
+            image (caminho da imagem)
+            initial (voltar ao valor original)
+            inherit (pegar o dado do pai)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: rgb(94, 94, 94);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        /*As propriedades abaixo do URL, ainda vão ser explicadas, 
+        contudo precisa definir um tamanho da borda e o estilo, para a imagem aparecer*/
+        
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: lightslategrey;
+            border-style: solid;
+            border-width: 1vh;
+            border-color: #fbc531;
+            border-image-source: url('border-image-source.png');
+            border-image-width: 50px;
+            border-image-slice: 30%;
+            border-image-outset: 50px;
+            border-image-repeat: round;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+    </div>
+</body>
+
+</html>

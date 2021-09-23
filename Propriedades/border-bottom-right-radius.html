@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*border-bottom-right-radius permite arredondar o canto inferior direito da borda,
+        ele recebe 2 valores, o primeiro sera para a borda superior e o segundo para a borda esquerda,
+        caso não definido, o valor será copiado
+        Valores possiveis: 
+            lenght (qualquer unidade de medida)
+            lenght (qualquer unidade de medida - segundo valor definido)
+            initial (voltar ao valor original)
+            inherit (pegar o dado do pai)
+        */
+        /*Primeiro, tem que informar que o estilo da bordar, nesse caso é solida (solid)
+        e em sefuida colocar uma expessura, se não num aparece nada
+        */
+        /*Relembrando para entrar na cabeça kkk,
+        border-box é para o css não contar o tamanho a partir do conteudo e gerar erro de tamanho*/
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #card {
+            width: 500px;
+            height: 500px;
+            border-width: 10px;
+            border-style: dashed;
+            border-color: red;
+            border-bottom-right-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /*testando a parte de pegar dados do pai*/
+        
+        #card>div {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            border-bottom-right-radius: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="card">
+        <div></div>
+    </div>
+</body>
+
+</html>

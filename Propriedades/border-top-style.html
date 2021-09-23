@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*border-top-style vai definir o estilo da borda da parte de cima do elemento
+        Valores possiveis: 
+            none (não definir estilo nenhum)
+            hidden (estilo oculo)
+            dotted (uma especie de bolinhas)
+            dashed ()
+            solid (apenas uma linha solida, mesmo)
+            double ()
+            groove ()
+            ridge ()
+            inset ()
+            outset ()
+            initial (voltar ao valor original)
+            inherit (pegar o dado do pai)
+        */
+        /*Primeiro, tem que informar que o estilo da bordar, nesse caso é solida (solid)
+        e em sefuida colocar uma expessura, se não num aparece nada
+        */
+        /*Relembrando para entrar na cabeça kkk,
+        border-box é para o css não contar o tamanho a partir do conteudo e gerar erro de tamanho*/
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            color: rgb(92, 32, 160);
+            background-color: dimgray;
+            border-top-style: dotted;
+            border-top-width: 1vh;
+            border-top-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut enim voluptatibus optio eveniet nemo quasi rerum reprehenderit provident adipisci consequatur repellendus doloremque atque omnis laboriosam consectetur ipsa laudantium, libero suscipit.
+
+</body>
+
+</html>

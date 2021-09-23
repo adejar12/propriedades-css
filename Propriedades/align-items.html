@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa propriedade é do modulo flex-box e do grid-layout. Essa defini os alinhamentos
+        dos filhos, tanto elementos no eixo secundario e na coluna (quando se usa grid-layout).
+        Essa propriedade equivale a ir no FILHO e definir a propriedade align-self
+        Valores possiveis: 
+            normal(||Valor padrão||)
+            stretch(preencher até caber -> mas só funciona se os elementos não tiverem
+            altura definidas)
+            center(colocar no centro, se no grid, no centro de cada linha)
+            start(Cada item inicia na sua respectiva linha)
+            end(usado em grid)
+            flex-start(para o inicio do flex)
+            felx-end(para o final do flex)
+            self-start()
+            self-end()
+            baseline(A linha base do texto é respeitada)
+            first baseline()
+            last baseline()
+            safe center()
+            unsafe center()
+            inherit(pegar do pai)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #333;
+        }
+        /*O align-item trabalha com o eixo secundario, então se vc esta trabalhando com
+        column, ele vai alterar as row*/
+        
+        .container-flex {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            align-items: baseline;
+        }
+        
+        .container {
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            align-items: stretch;
+        }
+        
+        .container>div {
+            width: 100px;
+            background-color: red;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div style="font-size: 30px;">A</div>
+        <div style="font-size: 60px;">B</div>
+        <div style="font-size: 10px;">C</div>
+        <div style="font-size: 80px;">D</div>
+        <div>E</div>
+    </div>
+
+</body>
+
+</html>

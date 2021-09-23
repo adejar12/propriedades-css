@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*border-collapse essa propria defise se as bordas de uma tabela devem ser mescladas em uma única, ou se devem se manter separdas
+        Valores possiveis: 
+            collase (para unir)
+            separate (para separar)
+            unset (para desativar)
+            initial (voltar ao valor original)
+            inherit (pegar o dado do pai)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: rgb(94, 94, 94);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        /*Como é tabela, ela sabe o que pode aumentar ou não, no sentido de cabecalho*/
+        
+        table {
+            border: solid 1px #333;
+            width: 70vw;
+            height: 20vw;
+            border-collapse: collapse;
+        }
+        
+        td,
+        th {
+            border: solid 1px #333
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Cargo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Adejar</th>
+                <th>adehar@gmail</th>
+                <th>64 9 9305-9020</th>
+                <th>Júnior</th>
+            </tr>
+            <tr>
+                <th>Printf</th>
+                <th>printf@gmail</th>
+                <th>64 9 9305-9020</th>
+                <th>Senior</th>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

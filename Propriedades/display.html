@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*display essa propriedade define o comportamento de exibição dos elementos.
+        Pelo que deu para notar, os display grid e flex, vc aplica no pai, que assim ele ordena nos filhos
+        Enquanto as outras propriedades, é melhor aplicar nos filhos
+        Valores possiveis: 
+            value (existe inumeros, olhar na aula)
+            initial(valor inicial)
+            inherit(pegar do pai ||Pega os valores do pai||)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .container {
+            margin-top: 30px;
+            max-width: 50wv;
+        }
+        
+        h2 {
+            font-family: 'Segoe UI';
+            color: #ff760c;
+        }
+        
+        .block {
+            /*O bloco sempre gera uma linha para cada elemento*/
+            display: block;
+        }
+        
+        .inline {
+            /*Os eleentos ficam tudo numa linha*/
+            display: inline;
+            width: 60px;
+        }
+        
+        .inline-block {
+            /*Os eleentos ficam tudo numa linha MAS vc não consegue alterar o tamanho dos elementos*/
+            display: inline-block;
+            width: 60px;
+        }
+        
+        .contents {
+            /*Remove todos os estilos*/
+            display: contents;
+            background-color: #333;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .inline-flex {
+            /*Como o flex fica parecendo com o block, por ocupar tudo, esse inline-flex modifica isso*/
+            display: inline-flex;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 70px);
+        }
+        
+        .inline-grid {
+            display: inline-grid;
+            grid-template-columns: repeat(4, 70px);
+        }
+        
+        .list-item {
+            display: list-item;
+        }
+        
+        .tabela {
+            display: table;
+        }
+        
+        .linha {
+            display: table-row;
+        }
+        
+        .cabecalho {
+            display: table-header-group;
+        }
+        
+        .celula {
+            display: table-cell;
+        }
+        
+        .cabecalho .celula {
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Display: table</h2>
+
+        <div class="tabela">
+            <div class="cabecalho">
+                <div class="linha">
+                    <div class="celula">Nome</div>
+                    <div class="celula">Email</div>
+                    <div class="celula">Idade</div>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="celula">TESTE</div>
+                <div class="celula">teste@gmail.com</div>
+                <div class="celula">25</div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Idade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>TESTE</td>
+                    <td>teste@gmail.com</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>TESTE</td>
+                    <td>teste@gmail.com</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>TESTE</td>
+                    <td>teste@gmail.com</td>
+                    <td>25</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="container">
+
+        <h2>Display: list-item</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+
+        <!-- o display list-item, é só para trazer a bolinha dos itens -->
+        <div>
+            <span class="list-item">iteam A</span>
+            <span class="list-item">iteam B</span>
+            <span class="list-item">iteam C</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Esse exemplo uma fica na frente da outra, pq estamos trabalhando com linha
+        não bloco, por isso esse comportamento -->
+        <h2>Display: inline-grid</h2>
+        <div class="inline-grid">
+            <div>AC</div>
+            <div>Ce</div>
+            <div>%</div>
+            <div>/</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>X</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>-</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>+</div>
+            <div>0</div>
+            <div>.</div>
+            <div>,</div>
+            <div>=</div>
+        </div>
+
+        <div class="inline-grid">
+            <div>AC</div>
+            <div>Ce</div>
+            <div>%</div>
+            <div>/</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>X</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>-</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>+</div>
+            <div>0</div>
+            <div>.</div>
+            <div>,</div>
+            <div>=</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Parece um block, pq esta usando a area toda, mas o navegador pega em grade.
+        O Grid trabalha com COLUNAS E LINHAS enquanto o flex, trabalha com COLUNA E LINHa -->
+        <h2>Display: grid</h2>
+        <div class="grid">
+            <div>AC</div>
+            <div>Ce</div>
+            <div>%</div>
+            <div>/</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>X</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>-</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>+</div>
+            <div>0</div>
+            <div>.</div>
+            <div>,</div>
+            <div>=</div>
+
+        </div>
+
+        <div class="grid">
+            <div>AC</div>
+            <div>Ce</div>
+            <div>%</div>
+            <div>/</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>X</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>-</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>+</div>
+            <div>0</div>
+            <div>.</div>
+            <div>,</div>
+            <div>=</div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Display: block</h2>
+        <div class="block">
+            Adejar
+        </div>
+        <div class="block">
+            Adejar
+        </div>
+        <div class="block">
+            Adejar
+        </div>
+        <!-- Pq o span fica um na frente do outro, e no block fica um de baixo do outro?
+        Pq o span, por padrão, o display dele é inline -->
+        <span>Adejar do Span</span>
+        <span>Adejar do Span</span>
+        <span>Adejar do Span</span>
+    </div>
+
+    <div class="container">
+        <h2>Display: Inline</h2>
+        <div class="inline">
+            Adejar
+        </div>
+        <div class="inline">
+            Adejar
+        </div>
+        <div class="inline">
+            Adejar
+        </div>
+
+        <span class="inline">Adejar do Span</span>
+        <span class="inline">Adejar do Span</span>
+        <span class="inline">Adejar do Span</span>
+    </div>
+
+
+    <div class="container">
+        <!-- A diferença do inline-block para o inline, é que o block permite que você
+        altere as dimenssões dele -->
+        <h2>Display: Inline-Block</h2>
+        <div class="inline-block">
+            Adejar
+        </div>
+        <div class="inline-block">
+            Adejar
+        </div>
+        <div class="inline-block ">
+            Adejar
+        </div>
+        <span class="inline-block">Adejar do Span</span>
+        <span class="inline-block">Adejar do Span</span>
+        <span class="inline-block">Adejar do Span</span>
+    </div>
+
+    <div class="container">
+        <!-- O contents é parecido com o inline-block, pois não permite alterar as dimensões,
+    só que além disso!, ele não permite que vc altere as cores também -->
+        <h2>Display: contents</h2>
+        <div class="contents">
+            Adejar
+        </div>
+        <div class="contents">
+            Adejar
+        </div>
+        <div class="contents ">
+            Adejar
+        </div>
+        <span class="contents">Adejar do Span</span>
+        <span class="contents">Adejar do Span</span>
+        <span class="contents">Adejar do Span</span>
+    </div>
+
+    <div class="container">
+        <!-- O flex é bem parecido com o block, o flex trabalha com um container
+                que possui os eixos de linha e coluna -->
+        <h2>Display: Flex</h2>
+        <div class="flex">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <!-- Aqui nesse caso, os filhos são flexiveis, mas o pai, ainda é block
+                lembrando que o pai é quem possui a class, e os filhos são das div
+            dentro dele. DIFERENTE do só Flex, que o pai pega o conteudo inteiro disponivel
+        USE O F12-->
+        <h2>Display: inline-flex</h2>
+        <div class="inline-flex">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

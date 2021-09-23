@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa propriedade é do modulo flex-box. Ela define o comportamento de outra propriedade
+        o flex-wrap, é semelhante ao align-items, porém, alinha as linhas flexíveis
+        Valores possiveis: 
+            normal()
+            stretch(preencher até caber -> mas só funciona se os elementos não tiverem
+            altura definidas ||Valor padrão||)
+            center(colocar no centro, se no grid, no centro de cada linha)
+            start(Cada item inicia na sua respectiva linha)
+            end(usado em grid)
+            flex-start(para o inicio do flex)
+            felx-end(para o final do flex)
+            baseline(A linha base do texto é respeitada)
+            first baseline()
+            last baseline()
+            space-between(enconstar nas estremidades)
+            space-around(que são igual ao do justfiny-content)
+            space-evenly(que são igual ao do justfiny-content)
+            safe center()
+            unsafe center()
+            inherit(pegar do pai)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #333;
+        }
+        
+        .container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+        
+        .container>div {
+            width: 400px;
+            height: 100px;
+            background-color: red;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*border-left-width a espessura da borda esquerda
+        Valores possiveis: 
+            medium (Valor com base no tamanho da fonte do conteudo)
+            thin ()
+            thick ()
+            length (unidade de medida)
+            initial (voltar ao valor original)
+            inherit (pegar o dado do pai)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            color: rgb(92, 32, 160);
+            background-color: dimgray;
+            border-left-style: solid;
+            border-left-width: thin;
+            border-left-color: rgba(76, 0, 255, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /*Aqui como colocou o inherit no border-left, ele pega TODOS
+        os filhos de border-left, independentemente se é border-left-width ou
+        color*/
+        
+        div {
+            width: 500px;
+            height: 500px;
+            border-left: inherit;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

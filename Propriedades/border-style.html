@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*border-style vai definir o estilo da borda do elemento
+        Valores possiveis: 
+            none (não definir estilo nenhum)
+            hidden (estilo oculo)
+            dotted (uma especie de bolinhas)
+            dashed (tracejado)
+            solid (apenas uma linha solida, mesmo)
+            double (duas linhas paralelas)
+            groove (muito parecido com a moldura, mas inverte as cores)
+            ridge (uma ideia de moldura)
+            inset (Funciona melhor quando é os 4 lados)
+            outset (Funciona melhor quando é os 4 lados)
+            initial (voltar ao valor original)
+            inherit (pegar o dado do pai)
+        */
+        /*Relembrando para entrar na cabeça kkk,
+        border-box é para o css não contar o tamanho a partir do conteudo e gerar erro de tamanho*/
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            color: rgb(92, 32, 160);
+            background-color: dimgray;
+            border-style: dashed;
+            border-width: 5vh;
+            border-color: rgb(255, 255, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        div {
+            border-color: red;
+            border-width: 10px;
+            border-style: inherit;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+    </div>
+
+</body>
+
+</html>

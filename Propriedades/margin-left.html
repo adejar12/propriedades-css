@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*margin top é o espaçamento esquerdo do elemento html 
+        Valores possiveis: 
+            lenght (tamanho)
+            auto (depende do conteudo)
+            initial (para voltar o valor original dela)
+            inherit (para herança, ou seja, pega os dados do pai)
+        */
+        
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+        
+        .bloco {
+            width: 20vw;
+            height: 20vw;
+            background-color: #487eb0;
+            margin-left: 2vw;
+        }
+        /*Aqui esta falando que o primeiro  bloco ira receber isso -> */
+        
+        .bloco:first-child {
+            margin-left: unset;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bloco"></div>
+    <div class="bloco"></div>
+    <div class="bloco"></div>
+</body>
+
+</html>

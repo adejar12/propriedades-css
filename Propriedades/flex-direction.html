@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa propriedade é do modulo flex-box. Elas vão no container (elemento pai)
+        e algumas propriedades vão nos itens. A propriedade que vc esta vendo agora
+        vai no pai
+        Valores possiveis: 
+            row(||PADRÃO||) ->Sempre que definir que o displey é flex, o flex-direction vem por padrão 
+            row-reverse()
+            column()
+            column-reverse()
+            initial(valor inicial)
+            inherit(pegar do pai ||Pega os valores do pai||)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        /*Como explicado lá em cima, o flex-drection deve ser colocado no pai, por isso
+        esta aqui*/
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 10px rgba(100, 100, 100, .2);
+            width: 80%;
+            height: 90vh;
+        }
+        
+        .container>div {
+            width: 150px;
+            height: 150px;
+            border-width: .5px;
+            border-style: solid;
+            border-color: black;
+        }
+        /*Dica de como centralizar os conteudos. Nada impede que o filho de uma div
+        possa ter um display flex também*/
+        
+        .container>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container>div:hover {
+            color: #fdcb6e;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+    </div>
+
+</body>
+
+</html>

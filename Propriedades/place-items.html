@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Essa propriedade é uma abreviação das propriedades abaixo. Lembrando que
+        passando apenas um valor, ira valer para os 2
+            align-items
+            justify-items
+        Valores possiveis: 
+             align-items(todos os valores da propriedade)
+             justify-items(todos os valores da propriedade)
+            initial(voltar ao valor padrão)
+            inherit(pegar do pai)
+            unset(desativar)
+        */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #333;
+            display: grid;
+            place-items: center start;
+            height: 100vh;
+        }
+        
+        div {
+            margin: 10px;
+            height: 200px;
+            width: 200px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

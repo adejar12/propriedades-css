@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*Height é a propriedade relacionado ao tamanho do CONTEUDO
+        Não tem nada a ver com as bordas, por exemplo
+        Valores possiveis dessa propriedade: 
+            auto ->(pegar o tamanho automaticamente)
+            length ->(unidade de medida)
+            initial ->(voltar ao valor original da propriedade)
+            inherit ->(pegar o valor do elemento pai)
+
+        % só funciona se a propriedade tiver alguém para usar de base
+        Se o body não tivesse 50vh e a div tivesse apenas 100%, nada iria aparecer
+        Pq é 100%?, beleza, mas 100% em relação a que?
+        */
+        
+        div {
+            background-color: rgb(85, 49, 131);
+            width: 100px;
+            height: 100%;
+        }
+        
+        body {
+            height: 50vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div> OLÁ DEDEU</div>
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hcode</title>
+    <style type="text/css">
+        /*width define a largura do conteudo, mas apenas para o conteudo
+        Valores possiveis: 
+            auto (depende do conteudo)
+            lenght (tamanho)
+            fit-content (a largura vai ser com base no conteudo)
+            initial (para voltar o valor original dela)
+            inherit (para herança, ou seja, pega os dados do pai)
+            max-content (usando todo o conteudo como referencia)
+            min-content
+            revert ()
+            unset (para desligar a propriedade)
+        */
+        
+        body {
+            margin: 50px;
+            padding: 0
+        }
+        
+        .fundo {
+            width: 100vw;
+            height: 100vh;
+        }
+        /*O que aqui esta dizendo?. Que todo filho direto de fundo, que no caso é uma div, vai aplicar esse estilo
+        contudo, note que existe um class^=largura, isso é o que?. Quer dizer que o nome da class tem que conter a palavra largura
+        para esse padrão ser ativado */
+        
+        .fundo>div[class^=largura] {
+            border-style: solid;
+            border-width: 2px;
+            margin-bottom: 5%;
+            height: 40px;
+        }
+        /*Pq o width funciona 100% aqui?, diferente do height que precisava de um pai?
+        Pq todos os navegadores aplicam um display:block, quando não é informado, e o 
+        display:block fala o que?, que tem que usar toda a largura (width) da tela
+        por isso os 100% funciona aqui*/
+        
+        .largura-auto {
+            width: auto;
+            border-color: #00598daa;
+        }
+        /*vw ele ignora as bordas, margem e tudo mais, diferente do %*/
+        
+        .largura-vwvh {
+            width: 50vw;
+            border-color: #008d44aa;
+        }
+        
+        .largura-percent {
+            width: 50%;
+            border-color: #EB6767aa;
+        }
+        
+        .largura-pixel {
+            width: 350px;
+            border-color: #c82aaeaa;
+        }
+        /*aqui o fit-content, muito util*/
+        
+        .largura-fit {
+            width: fit-content;
+            border-color: #c2f01caa;
+        }
+        /*A diferença para o fit-content, é que ele não
+        fica responsivel e gera uma barra de rolagem*/
+        
+        .largura-max {
+            width: max-content;
+            border-color: #2ac3c8aa;
+        }
+        /*Min serve para pegar o valor minimo baseado na maior palavra*/
+        
+        .largura-min {
+            width: min-content;
+            border-color: #7c2ac8aa;
+        }
+        
+        .largura-unset {
+            width: unset;
+            border-color: #57c82aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="fundo">
+        <div class="largura-auto">
+            AUTO: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aliquam veniam blanditiis ullam necessitatibus, nam maxime animi? Omnis eligendi, iure quod dicta ullam placeat? Ut vero minima enim sit ipsam.
+        </div>
+
+        <div class="largura-vwvh">
+            VWVH: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aliquam veniam blanditiis ullam necessitatibus, nam maxime animi? Omnis eligendi, iure quod dicta ullam placeat? Ut vero minima enim sit ipsam.
+        </div>
+
+        <div class="largura-percent">
+            PERCENT: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aliquam veniam blanditiis ullam necessitatibus, nam maxime animi? Omnis eligendi, iure quod dicta ullam placeat? Ut vero minima enim sit ipsam.
+        </div>
+
+        <div class="largura-pixel">
+            PIXEL: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aliquam veniam blanditiis ullam necessitatibus, nam maxime animi? Omnis eligendi, iure quod dicta ullam placeat? Ut vero minima enim sit ipsam.
+        </div>
+
+        <div class="largura-fit">
+            FIT: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aliquam veniam blanditiis ullam necessitatibus, nam maxime animi? Omnis eligendi, iure quod dicta ullam placeat? Ut vero minima enim sit ipsam.
+        </div>
+
+        <div class="largura-max">
+            MAX: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aliquam veniam blanditiis ullam necessitatibus, nam maxime animi? Omnis eligendi, iure quod dicta ullam placeat? Ut vero minima enim sit ipsam.
+        </div>
+
+        <div class="largura-min">
+            MIN: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aliquam veniam blanditiis ullam necessitatibus, nam maxime animi? Omnis eligendi, iure quod dicta ullam placeat? Ut vero minima enim sit ipsam.
+        </div>
+
+        <div class="largura-unset">
+            unset: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio aliquam veniam blanditiis ullam necessitatibus, nam maxime animi? Omnis eligendi, iure quod dicta ullam placeat? Ut vero minima enim sit ipsam.
+        </div>
+    </div>
+
+</body>
+
+</html>
