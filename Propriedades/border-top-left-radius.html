@@ -27,27 +27,110 @@
         }
         
         body {
-            margin: 0;
-            padding: 0;
+            background-color: #282633;
+        }
+        
+        .container {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
         }
         
-        #card {
-            width: 500px;
-            height: 500px;
-            border-width: 10px;
-            border-style: dashed;
-            border-color: red;
-            border-top-left-radius: 50% 10%;
+        .container--exemplo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .container--conteudo {
+            height: 50px;
+            width: 422px;
+            background-color: #494560;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        strong {
+            color: #D840C6;
+        }
+        
+        h2 {
+            color: #D9D7E2;
+            width: 100px;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+        
+        h1 {
+            color: #D9D7E2;
+            margin-right: 15px
+        }
+        
+        .container--conteudo--texto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bolder;
+            background-color: #CF46C6;
+            width: 70px;
+            height: 35px;
+            margin-left: 1.5%;
+            color: #D9D7E2;
+            margin-right: 15px;
+        }
+        
+        .one {
+            border-top-left-radius: 50%;
+        }
+        
+        .two {
+            border-top-left-radius: 50% 20%
         }
     </style>
 </head>
 
 <body>
+    <div class="container">
 
-    <div id="card"></div>
+        <h1>CSS <strong>border-top-left-radius</strong></h3>
+            <div class="container--exemplo">
+                <h2>
+                    lenght - 1 Unidade
+                </h2>
+                <div class="container--conteudo">
+                    <div class="container--conteudo--texto one">
+                        A
+                    </div>
+                    <div class="container--conteudo--texto one">
+                        B
+                    </div>
+                    <div class="container--conteudo--texto one">
+                        C
+                    </div>
+                </div>
+            </div>
+
+            <div class="container--exemplo">
+                <h2>
+                    lenght - 2º Unidade
+                </h2>
+                <div class="container--conteudo">
+                    <div class="container--conteudo--texto two">
+                        A
+                    </div>
+                    <div class="container--conteudo--texto two">
+                        B
+                    </div>
+                    <div class="container--conteudo--texto two">
+                        C
+                    </div>
+                </div>
+            </div>
+
+    </div>
 </body>
 
 </html>
