@@ -21,21 +21,161 @@
             box-sizing: border-box;
         }
         
+        * {
+            box-sizing: border-box;
+        }
+        
         body {
-            margin: 0;
-            width: 100vw;
-            height: 100vh;
-            color: rgb(92, 32, 160);
-            background-color: dimgray;
+            background-color: #282633;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .container--exemplo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .container--conteudo {
+            height: 50px;
+            width: 422px;
+            background-color: #494560;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        strong {
+            color: #D840C6;
+        }
+        
+        h2 {
+            color: #D9D7E2;
+            width: 100px;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+        
+        h1 {
+            color: #D9D7E2;
+            margin-right: 15px
+        }
+        
+        .container--conteudo--texto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bolder;
+            background-color: #CF46C6;
+            border-radius: 10px;
+            width: 70px;
+            height: 35px;
+            margin-left: 1.5%;
+            color: #D9D7E2;
+            margin-right: 15px;
+        }
+        
+        .thin {
+            border-bottom-style: solid;
+            border-bottom-width: thin;
+        }
+        
+        .medium {
             border-bottom-style: solid;
             border-bottom-width: medium;
-            border-bottom-color: rgb(255, 255, 0, 0.5);
+        }
+        
+        .thick {
+            border-bottom-style: solid;
+            border-bottom-width: thick;
+        }
+        
+        .length {
+            border-bottom-style: solid;
+            border-bottom-width: 10px;
         }
     </style>
 </head>
 
 <body>
+    <div class="container">
 
+        <h1>CSS <strong>border-bottom-width</strong></h3>
+            <div class="container--exemplo">
+                <h2>
+                    medium
+                </h2>
+                <div class="container--conteudo">
+                    <div class="container--conteudo--texto medium">
+                        A
+                    </div>
+                    <div class="container--conteudo--texto medium">
+                        B
+                    </div>
+                    <div class="container--conteudo--texto medium">
+                        C
+                    </div>
+                </div>
+            </div>
+
+            <div class="container--exemplo">
+                <h2>
+                    thin
+                </h2>
+                <div class="container--conteudo">
+                    <div class="container--conteudo--texto thin">
+                        A
+                    </div>
+                    <div class="container--conteudo--texto thin">
+                        B
+                    </div>
+                    <div class="container--conteudo--texto thin">
+                        C
+                    </div>
+                </div>
+            </div>
+
+            <div class="container--exemplo">
+                <h2>
+                    thick
+                </h2>
+                <div class="container--conteudo">
+                    <div class="container--conteudo--texto thick">
+                        A
+                    </div>
+                    <div class="container--conteudo--texto thick">
+                        B
+                    </div>
+                    <div class="container--conteudo--texto thick">
+                        C
+                    </div>
+                </div>
+            </div>
+
+            <div class="container--exemplo">
+                <h2>
+                    length
+                </h2>
+                <div class="container--conteudo">
+                    <div class="container--conteudo--texto length">
+                        A
+                    </div>
+                    <div class="container--conteudo--texto length">
+                        B
+                    </div>
+                    <div class="container--conteudo--texto length">
+                        C
+                    </div>
+                </div>
+            </div>
+    </div>
 </body>
 
 </html>
