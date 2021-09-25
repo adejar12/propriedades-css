@@ -13,11 +13,13 @@
         Valores possiveis:
             static(explicado lá em cima e não afetado pelo top, right,bottom e left )
             fixed(deixar fixo,cogelado, o scroll não ira afetar ele e o mesmo passa por cima de outros elementos)
-            absolute(Uma posição fixa em ralação ao ancestral posicionado mais proximo
+            absolute(Uma posição fixa em ralação ao ancestral posicionado (que tenha um position) mais proximo
             . Caso não exista nenhum elemnto ancestral ele usara o corpo da página, isso
             fara com que ele acompanhe o scroll)
-            relative(em qualquer lugar da tela)
-            sticky(ficar congelado em cima ao rodar o scrow)
+            relative(em qualquer lugar da tela, o elemento é relativo
+            a ele mesmo)
+            sticky(ficar congelado ao chegar em determinado ponto
+            do scrow)
             inherit(pegar do pai )
             unset(desativar)
         */
@@ -27,83 +29,192 @@
         }
         
         body {
-            margin: 0;
-            background-color: #17181c;
-            color: #fff;
-            font-family: sans-serif;
-            height: 150vh;
+            background-color: #282633;
         }
         
-        .pulse-static {
-            background: none;
-            color: #ff760c;
-            padding: 15px 40px;
-            border: 2px solid #ef8f6e;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 150vh
         }
         
-        .pulse-relative {
-            position: relative;
-            top: 100px;
-            right: 80px;
-            background: none;
-            color: #ff760c;
-            padding: 15px 40px;
-            border: 2px solid #ef8f6e;
+        .container--exemplo {
+            display: flex;
+            align-items: center;
         }
         
-        .pulse-fixed {
-            position: fixed;
-            top: 100px;
-            right: 80px;
-            background: none;
-            color: #ff760c;
-            padding: 15px 40px;
-            border: 2px solid #ef8f6e;
+        .container--conteudo {
+            height: 50px;
+            width: 422px;
+            background-color: #494560;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
         
-        .pulse-absolute {
-            position: absolute;
-            top: 80px;
-            background: none;
-            color: #ff760c;
-            padding: 15px 40px;
-            border: 2px solid #ef8f6e;
+        strong {
+            color: #D840C6;
         }
-        /*O botão acompanha a div*/
         
-        #posicao {
-            position: relative;
+        h2 {
+            color: #D9D7E2;
             width: 100px;
-            height: 100px;
-            background-color: #fff;
-            top: 200px
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
         }
         
-        .pulse-sticky {
+        h1 {
+            color: #D9D7E2;
+            margin-right: 15px
+        }
+        
+        .container--conteudo--texto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bolder;
+            background-color: #CF46C6;
+            border-radius: 10px;
+            width: 70px;
+            height: 35px;
+            margin-left: 1.5%;
+            color: #D9D7E2;
+            margin-right: 15px;
+        }
+        
+        .static {
+            position: static;
+            top: 50px
+        }
+        
+        .fixed {
+            position: fixed;
+            top: 150px;
+            left: 35vw;
+        }
+        
+        .absolute {
+            position: absolute;
+            top: 25;
+            left: 30vw;
+        }
+        
+        .relative {
+            position: relative;
+            top: 0;
+            left: 20vw;
+        }
+        
+        .sticky {
             position: sticky;
-            top: 80px;
-            left: 450px;
-            background: none;
-            color: #ff760c;
-            padding: 15px 40px;
-            border: 2px solid #ef8f6e;
+            top: 10vh;
+        }
+        
+        .container--conteudo :hover {
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
 
 <body>
+    <div class="container">
 
-    <button>Static</button>
-    <button>Relative</button>
-    <button>Fixed</button>
-    <button>Absolute</button>
-    <button class="pulse-sticky">Sticky</button>
+        <h1>CSS <strong>position</strong></h3>
+            <div class="container--exemplo">
+                <h2>
+                    static
+                </h2>
+                <div class="container--conteudo">
+                    <div class="container--conteudo--texto static">
+                        A
+                    </div>
+                    <div class="container--conteudo--texto static">
+                        B
+                    </div>
+                    <div class="container--conteudo--texto static">
+                        C
+                    </div>
+                </div>
+            </div>
 
-    <div id="posicao">
-        <button class="pulse-absolute">Absolute</button>
+            <div class="container--exemplo">
+                <h2>
+                    fixed
+                </h2>
+                <div class="container--conteudo">
+                    <div class="container--conteudo--texto static">
+                        A
+                    </div>
+                    <div class="container--conteudo--texto fixed">
+                        B
+                    </div>
+                    <div class="container--conteudo--texto static">
+                        C
+                    </div>
+                </div>
+            </div>
+
+            <div class="container--exemplo">
+                <h2>
+                    absolute
+                </h2>
+                <div class="container--conteudo" style="position: relative">
+                    <div class="container--conteudo--texto static">
+                        A
+                    </div>
+                    <div class="container--conteudo--texto absolute">
+                        B
+                    </div>
+                    <div class="container--conteudo--texto static">
+                        C
+                    </div>
+                </div>
+            </div>
+
+            <div class="container--exemplo">
+                <h2>
+                    relative
+                </h2>
+                <div class="container--conteudo">
+                    <div class="container--conteudo--texto static">
+                        A
+                    </div>
+                    <div class="container--conteudo--texto relative">
+                        B
+                    </div>
+                    <div class="container--conteudo--texto static">
+                        C
+                    </div>
+                </div>
+            </div>
+            <div class="container--conteudo--texto sticky">
+                Teste
+            </div>
+            <div class="container--exemplo">
+                <h2>
+                    sticky
+                </h2>
+
+                <div class="container--conteudo">
+                    <div class="container--conteudo--texto static">
+                        A
+                    </div>
+                    <div class="container--conteudo--texto sticky">
+                        B
+                    </div>
+                    <div class="container--conteudo--texto static">
+                        C
+                    </div>
+                </div>
+            </div>
+
+
     </div>
-
-
 </body>
 
 </html>
